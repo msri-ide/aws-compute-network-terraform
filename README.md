@@ -141,9 +141,11 @@ Suggested evidence to include:
 
 ```text
 aws-network-compute-terraform/
-├── architecture/
-│   └── architecture.png
 ├── screenshots/
+    ├── architecture.png
+    ├── ec2-instance.png
+    ├── niginx-browser.png
+    └── terraform-output.png
 ├── terraform/
 │   ├── version.tf
 │   ├── variable.tf

@@ -1,4 +1,4 @@
-# ?? AWS Network & Compute Infrastructure with Terraform
+# â˜ï¸ AWS Network & Compute Infrastructure with Terraform
 
 **Provisioning secure, cost-conscious AWS infrastructure using Infrastructure as Code.**
 
@@ -10,7 +10,7 @@
 
 > **Project goal:** Build, validate, and deploy a web server on AWS using Terraform, verify connectivity and security, and destroy the infrastructure after testing to reduce ongoing cloud costs.
 
-## ?? Project Overview
+## ğŸ“Œ Project Overview
 
 This hands-on cloud engineering project demonstrates how to provision AWS networking and compute resources using Terraform.
 
@@ -18,11 +18,11 @@ The infrastructure was deployed in the **Asia Pacific (Hyderabad) region (`ap-so
 
 The deployment was tested through a browser and SSH session. Nginx was confirmed running, and a local HTTP request returned `200 OK`. After verification, all eight managed AWS resources were destroyed.
 
-## ??? Architecture
+## ğŸ—ï¸ Architecture
 
 **Request flow**
 
-`Internet  Internet Gateway  Public Subnet  Security Group  EC2  Nginx`
+`Internet â†’ Internet Gateway â†’ Public Subnet â†’ Security Group â†’ EC2 â†’ Nginx`
 
 ### AWS components
 
@@ -38,7 +38,7 @@ The deployment was tested through a browser and SSH session. Nginx was confirmed
 | Nginx | Serves the custom HTML welcome page |
 | Terraform | Provisions and manages infrastructure as code |
 
-### ?? Security considerations
+### ğŸ” Security considerations
 
 - SSH access on TCP port 22 was configured to use a specific public IPv4 CIDR (`/32`).
 - HTTP access on TCP port 80 was enabled for browser access.
@@ -46,7 +46,7 @@ The deployment was tested through a browser and SSH session. Nginx was confirmed
 - The root EBS volume was configured as an encrypted 8 GiB `gp3` volume.
 - No NAT Gateway or load balancer was deployed.
 
-## ??? Technology Stack
+## ğŸ› ï¸ Technology Stack
 
 - **Cloud:** AWS
 - **Infrastructure as Code:** Terraform
@@ -57,7 +57,7 @@ The deployment was tested through a browser and SSH session. Nginx was confirmed
 - **CLI:** AWS CLI, PowerShell, SSH
 - **Version Control:** Git and GitHub
 
-## ?? How It Works
+## âš™ï¸ How It Works
 
 ### 1. Configure the environment
 
@@ -124,41 +124,41 @@ terraform state list
 
 Review the destroy plan and confirm that only the intended project resources will be removed.
 
-## ?? Project Evidence
+## ğŸ“¸ Project Evidence
 
 Screenshots are stored in the `screenshots/` directory.
 
 Suggested evidence to include:
 
-- `architecture.png` - actual deployed architecture
-- `ec2-instance.png` - EC2 configuration and status
-- `terraform-output.png` - Terraform output and state
-- `nginx-browser.png` - custom welcome page
+- `architecture.png` â€” actual deployed architecture
+- `ec2-instance.png` â€” EC2 configuration and status
+- `terraform-output.png` â€” Terraform output and state
+- `nginx-browser.png` â€” custom welcome page
 
 *Use your actual screenshot filenames, and update this list to match the files committed to the repository.*
 
-## ?? Repository Structure
+## ğŸ“‚ Repository Structure
 
 ```text
 aws-network-compute-terraform/
-ÃÄÄ architecture/
-³   ÀÄÄ architecture.png
-ÃÄÄ screenshots/
-ÃÄÄ terraform/
-³   ÃÄÄ version.tf
-³   ÃÄÄ variable.tf
-³   ÃÄÄ locals.tf
-³   ÃÄÄ main.tf
-³   ÃÄÄ outputs.tf
-³   ÀÄÄ terraform.tfvars
-ÃÄÄ test/
-ÃÄÄ .gitignore
-ÀÄÄ README.md
+â”œâ”€â”€ architecture/
+â”‚   â””â”€â”€ architecture.png
+â”œâ”€â”€ screenshots/
+â”œâ”€â”€ terraform/
+â”‚   â”œâ”€â”€ version.tf
+â”‚   â”œâ”€â”€ variable.tf
+â”‚   â”œâ”€â”€ locals.tf
+â”‚   â”œâ”€â”€ main.tf
+â”‚   â”œâ”€â”€ outputs.tf
+â”‚   â””â”€â”€ terraform.tfvars
+â”œâ”€â”€ test/
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
 ```
 
 > Keep `terraform.tfvars` local if it contains environment-specific configuration. Never commit private SSH keys, Terraform state files, saved plan files, or credentials.
 
-## ?? Key Learnings
+## ğŸ’¡ Key Learnings
 
 - Provisioning AWS infrastructure using declarative Terraform configuration.
 - Designing a public subnet and configuring internet routing.
@@ -168,13 +168,13 @@ aws-network-compute-terraform/
 - Validating deployment through SSH, systemd, and HTTP checks.
 - Cleaning up cloud infrastructure after testing to control costs.
 
-## ?? Cost Awareness
+## ğŸ’° Cost Awareness
 
 This project intentionally avoids a NAT Gateway and load balancer to reduce unnecessary infrastructure costs.
 
 EC2 runtime, public IPv4 addresses, and EBS storage may incur charges depending on account pricing and credits. The resources used for this deployment have been destroyed after testing.
 
-## ?? Future Improvements
+## ğŸš€ Future Improvements
 
 - Add a private subnet and NAT-free private workload design.
 - Introduce reusable Terraform modules.
@@ -182,9 +182,8 @@ EC2 runtime, public IPv4 addresses, and EBS storage may incur charges depending 
 - Add HTTPS using an appropriate TLS and certificate setup.
 - Improve monitoring, logging, and infrastructure documentation.
 
-## ????? Project Status
+## ğŸ‘¨â€ğŸ’» Project Status
 
-**Deployment verified ú Cleanup completed ú GitHub publication pending**
+**Deployment verified Â· Cleanup completed Â· GitHub publication pending**
 
 This project is part of my hands-on cloud engineering journey, focused on practical AWS networking, compute, Infrastructure as Code, security, and cost awareness.
-

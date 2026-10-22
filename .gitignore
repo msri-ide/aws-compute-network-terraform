@@ -1,0 +1,17 @@
+# Terraform working files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*/tfplan
+*.tfplan
+crash.log
+crash.*.log
+
+# Local variable files
+terraform.tfvars
+*.auto.tfvars
+
+# Credentials and private keys
+*.pem
+*.key
+.aws/
